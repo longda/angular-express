@@ -2,18 +2,47 @@
 html(lang='en', ng-app='myApp')
   head
     meta(charset='utf-8')
-    title= 'My AngularJS App'
-    link(rel='stylesheet', href='/stylesheets/app.css')
+    title= 'Angular Express'
+    link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap.css')
+    // 
+      link(rel='stylesheet', href='/stylesheets/app.css')
+    style.
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap-responsive.css')
   body
-    ul.menu
-      li
-        a(href='#/view1') view1
-      li
-        a(href='#/view2') view2
+    div(class='navbar navbar-inverse navbar-fixed-top')
+      .navbar-inner
+        .container
+          a(class='btn btn-navbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='#') Angular Express
+          div(class='nav-collapse collapse')
+            ul.nav
+              li.active 
+                a(href='#') Home
+              li 
+                a(href='#/view1') View 1
+              li 
+                a(href='#/view2') View 2
+    .container
+      h1 Angular + Express + Coffeescript + Bootstrap
 
-    <div ng-view></div>
+      <div ng-view></div>
 
-    <div>Angular seed app: v<span app-version></span></div>
+      <div>Angular seed app: v<span app-version></span></div>
+
+
+    //
+      ul.menu
+        li
+          a(href='#/view1') view1
+        li
+          a(href='#/view2') view2
+
 
     //
       In production use:
@@ -25,3 +54,5 @@ html(lang='en', ng-app='myApp')
     script(type='text/javascript', src='/javascripts/controllers.js')
     script(type='text/javascript', src='/javascripts/filters.js')
     script(type='text/javascript', src='/javascripts/directives.js')
+    script(type='text/javascript', src='/lib/bootstrap/js/bootstrap.js')
+
