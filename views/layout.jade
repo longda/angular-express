@@ -1,0 +1,27 @@
+!!!
+html(lang='en', ng-app='myApp')
+  head
+    meta(charset='utf-8')
+    title= 'My AngularJS App'
+    link(rel='stylesheet', href='/stylesheets/app.css')
+  body
+    ul.menu
+      li
+        a(href='#/view1') view1
+      li
+        a(href='#/view2') view2
+
+    <div ng-view></div>
+
+    <div>Angular seed app: v<span app-version></span></div>
+
+    //
+      In production use:
+      script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js')
+    
+    script(type='text/javascript', src='/lib/angular/angular.js')
+    script(type='text/javascript', src='/javascripts/app.js')
+    script(type='text/javascript', src='/javascripts/services.js')
+    script(type='text/javascript', src='/javascripts/controllers.js')
+    script(type='text/javascript', src='/javascripts/filters.js')
+    script(type='text/javascript', src='/javascripts/directives.js')
